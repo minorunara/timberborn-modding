@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<device>
+	<FWVersion>VA00.0C.0D.BJ1N_300</FWVersion>
+	<ProductName>KNA-DR300</ProductName>
+	<UID>N/A</UID>
+	<FUD>20130101-000000</FUD>
+	<ProjectCode>N467</ProjectCode>
+	<SKUID>7162</SKUID>
+	<OSVersion>uC/OS-II v2.81</OSVersion>
+	<MemorySize>64 MB</MemorySize>
+	<StorageSize>16 MB</StorageSize>
+</device>
