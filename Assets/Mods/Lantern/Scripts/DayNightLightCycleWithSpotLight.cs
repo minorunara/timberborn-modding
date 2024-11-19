@@ -5,14 +5,12 @@ using Timberborn.TimeSystem;
 using Timberborn.SingletonSystem;
 using Timberborn.Rendering;
 using Timberborn.BlockSystem;
-using Timberborn.BaseComponentSystem;
 
-public class LightBlinker : MonoBehaviour, IFinishedStateListener
+public class DayNightLightCycleWithSpotLight : MonoBehaviour, IFinishedStateListener
 {
     public Light targetLight;  // 点滅させるライトを指定
     public float hueChangeSpeed = 0f;  // 色相の変化速度
     public float fadeDuration = 1.0f;  // フェードの持続時間（秒）
-
     private BuildingLightToggle _buildingLightToggle;
     private BuildingLighting _buildingLighting;
     private MaterialColorer _materialColorer;
@@ -20,11 +18,10 @@ public class LightBlinker : MonoBehaviour, IFinishedStateListener
     private float _fadeTimer = 0.0f;
     private bool _isFadingIn = false;
     private bool _isLightOn = false;
+    private bool _isBuildingComplete = false;
     private float _defaultLightIntensity = 0.0f;
-
     private EventBus _eventBus;
     private IDayNightCycle _dayNightCycle;
-
     [Inject]
     public void InjectDependencies(EventBus eventBus, IDayNightCycle dayNightCycle, MaterialColorer materialColorer)
     {
@@ -32,7 +29,6 @@ public class LightBlinker : MonoBehaviour, IFinishedStateListener
         _dayNightCycle = dayNightCycle;
         _materialColorer = materialColorer;
     }
-
     void Start()
     {
         _buildingLighting = GetComponent<BuildingLighting>();
@@ -42,22 +38,20 @@ public class LightBlinker : MonoBehaviour, IFinishedStateListener
         }
         else
         {
-            Debug.LogWarning("LightBlinker: BuildingLightingが見つかりませんでした。");
+            Debug.LogWarning("DayNightLightCycleWithSpotLight: BuildingLightingが見つかりませんでした");
         }
-
         if (targetLight == null)
         {
-            Debug.LogWarning("LightBlinker: targetLightが設定されていません。");
+            Debug.LogWarning("DayNightLightCycleWithSpotLight: targetLightが設定されていません。");
         }
         else
         {
             _defaultLightIntensity = targetLight.intensity;
         }
-
         // イベント登録
         _eventBus.Register(this);
         // フェードの更新
-        if (_dayNightCycle.IsNighttime)
+        if (_dayNightCycle.IsNighttime && _isBuildingComplete)
         {
             StartFadeInInstant();
         }
@@ -66,9 +60,9 @@ public class LightBlinker : MonoBehaviour, IFinishedStateListener
             StartFadeOutInstant();
         }
     }
-
     public void OnEnterFinishedState()
     {
+        _isBuildingComplete = true;
         if (_dayNightCycle != null)
         {
             if (_dayNightCycle.IsNighttime && !_isLightOn)
@@ -81,36 +75,42 @@ public class LightBlinker : MonoBehaviour, IFinishedStateListener
             }
         }
     }
-
     public void OnExitFinishedState()
     {
+        _isBuildingComplete = false;
         _eventBus.Unregister(this);
     }
-
     void OnDestroy()
     {
         // イベント登録解除
         _eventBus.Unregister(this);
     }
-
     void Update()
     {
-        if (_fadeTimer < fadeDuration)
+        // 色相の更新
+        _currentHue += hueChangeSpeed * Time.deltaTime;
+        if (_currentHue > 1.0f)
+        {
+            _currentHue -= 1.0f;
+        }
+        if (_materialColorer != null)
+        {
+            _materialColorer.SetLightingHueOffset(gameObject, _currentHue);
+        }
+        UpdateLightColor();
+        if (_fadeTimer < fadeDuration && _isBuildingComplete)
         {
             _fadeTimer += Time.deltaTime;
             float t = Mathf.Clamp01(_fadeTimer / fadeDuration);
             float intensity = _isFadingIn ? t : 1.0f - t;
-
             if (_buildingLighting != null)
             {
                 _buildingLighting.SetLightingStrength(intensity);
             }
-
             if (targetLight != null)
             {
                 targetLight.intensity = intensity * _defaultLightIntensity;
             }
-
             if (_fadeTimer >= fadeDuration)
             {
                 _fadeTimer = fadeDuration;  // 確実に終了状態にする
@@ -127,19 +127,16 @@ public class LightBlinker : MonoBehaviour, IFinishedStateListener
             }
         }
     }
-
     [OnEvent]
     public void OnNighttimeStartEvent(NighttimeStartEvent nighttimeStartEvent)
     {
         StartFadeIn();
     }
-
     [OnEvent]
     public void OnDayTimeStartEvent(DaytimeStartEvent daytimeStartEvent)
     {
         StartFadeOut();
     }
-
     private void StartFadeInInstant()
     {
         if (_buildingLightToggle != null)
@@ -155,10 +152,9 @@ public class LightBlinker : MonoBehaviour, IFinishedStateListener
         }
         else
         {
-            Debug.LogWarning("LightBlinker: BuildingLightToggleが初期化されていません。");
+            Debug.LogWarning("DayNightLightCycleWithSpotLight: BuildingLightToggleが初期化されていません。");
         }
     }
-
     private void StartFadeOutInstant()
     {
         if (_buildingLightToggle != null)
@@ -173,7 +169,6 @@ public class LightBlinker : MonoBehaviour, IFinishedStateListener
             }
         }
     }
-
     private void StartFadeIn()
     {
         if (!_isLightOn && _buildingLightToggle != null)
@@ -183,7 +178,6 @@ public class LightBlinker : MonoBehaviour, IFinishedStateListener
             _fadeTimer = 0.0f;
         }
     }
-
     private void StartFadeOut()
     {
         if (_isLightOn)
@@ -192,7 +186,6 @@ public class LightBlinker : MonoBehaviour, IFinishedStateListener
             _fadeTimer = 0.0f;
         }
     }
-
     void UpdateLightColor()
     {
         if (targetLight != null)
