@@ -1,0 +1,8 @@
+{
+  "Id": "Lanterns",
+  "GroupId": "Decoration",
+  "Order": 300,
+  "Icon": "Buildings/Decorations/Lantern/LanternCategoryIcon",
+  "NameLocKey": "minorunara.Lantern.LanternCategory.DisplayName",
+  "FallbackGroup": false
+}

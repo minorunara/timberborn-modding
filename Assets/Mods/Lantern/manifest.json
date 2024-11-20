@@ -1,9 +1,17 @@
 {
   "Name": "Lanterns",
-  "Version": "0.1",
+  "Version": "2.0",
   "Id": "Timberborn.ModExamples.Lanterns",
-  "MinimumGameVersion": "0.0.0.0",
-  "Description": "A simple mod that shows the programming classic on the screen.",
+  "MinimumGameVersion": "0.6.0.0",
+  "Description": "This mod adds lanterns that glow at night.",
   "RequiredMods": [
+    {
+      "Id": "Harmony",
+      "MinimumVersion": "2.3.3"
+    },
+    {
+      "Id": "TimberApi",
+      "MinimumVersion": "0.7.0.1"
+    }
   ]
 }

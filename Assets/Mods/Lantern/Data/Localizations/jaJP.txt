@@ -27,24 +27,24 @@ minorunara.ToriiGates.GorgeousToriiGateNeed.DisplaynameLocKey,華やかな鳥居
 minorunara.ToriiGates.GreatToriiGateNeed.DisplaynameLocKey,大鳥居
 minorunara.Lantern.ForwardFacingBench.DisplayName,前向きベンチ
 minorunara.Lantern.ForwardFacingBench.Description,背もたれ側に道路が繋がるベンチ。
-minorunara.Lantern.ForwardFacingBench.Flavor,「座るときは背もたれを乗り越える。」 -ピナ
+minorunara.Lantern.ForwardFacingBench.Flavor,丸太食ってる場合じゃねぇ！と背もたれを乗り越えて座る。
 minorunara.Lantern.LanternCategory.DisplayName,照明
 minorunara.Lantern.LanternCategory.Description,夜になると光る。
 minorunara.Lantern.IndoorLantern.DisplayName,置行灯
 minorunara.Lantern.IndoorLantern.Description,屋敷の廊下等で足元を照らすために使用される角行灯。
-minorunara.Lantern.IndoorLantern.Flavor,ビーバーの先祖は天敵から逃れるために夜行性であったが、万物の霊長となった今では灯りがあった方が落ち着く。
+minorunara.Lantern.IndoorLantern.Flavor,ビーバーの先祖は天敵から逃れるために夜行性であったが、万物の霊長となった今では昼行性である。
 minorunara.Lantern.StreetLantern.DisplayName,辻行灯
 minorunara.Lantern.StreetLantern.Description,街道や辻番所に置かれた照明。店の看板としても使われる。
 minorunara.Lantern.StreetLantern.Flavor,看板を光らせるというアイデアが街の夜景を大きく変えることになる。
 minorunara.Lantern.GardenLantern.DisplayName,赤灯籠
 minorunara.Lantern.GardenLantern.Description,神社によく置かれている灯籠。
-minorunara.Lantern.GardenLantern.Flavor,あかりをつけましょ爆弾に。
+minorunara.Lantern.GardenLantern.Flavor,明かりをつけましょ爆弾に。
 minorunara.Lantern.PaperLantern.DisplayName,提灯
 minorunara.Lantern.PaperLantern.Description,祭りの時や飲み屋の前に飾ってハレの日を演出する時に使う提灯。
-minorunara.Lantern.PaperLantern.Flavor,夜更かしは楽しいけど明日も仕事なんだからほどほどに。
+minorunara.Lantern.PaperLantern.Flavor,ある種のビーバーは酒を飲む時に揚げあられをツマミにするという。
 minorunara.Lantern.ModernLantern1.DisplayName,モダンな街灯（三角屋根）
 minorunara.Lantern.ModernLantern1.Description,今風の街灯（三角形の屋根付き）。
-minorunara.Lantern.ModernLantern1.Flavor,夜の闇を克服したビーバーにはもう怖いものなんて無い。 ※ただし干ばつは除く
+minorunara.Lantern.ModernLantern1.Flavor,夜の闇を克服したビーバーにはもう怖いものなんて無い。 ※ただし悪潮は除く
 minorunara.Lantern.ModernLantern2.DisplayName,モダンな街灯（四角）
 minorunara.Lantern.ModernLantern2.Description,今風の街灯。
 minorunara.Lantern.ModernLantern2.Flavor,現代はやがて過去になる。しかし遠い未来でも治水の重要性は変わらず在り続けるだろう。

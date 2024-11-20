@@ -1,0 +1,8 @@
+{
+  "Id": "IronTeeth",
+  "Paths#append": [
+    "Materials/UberAtlas/Materials/Folktails/Details.Folktails",
+    "Materials/UberAtlas/Materials/Folktails/BaseWood_Brown.Folktails",
+    "Materials/UberAtlas/Materials/Folktails/WindowsAtlas.Folktails"
+  ]
+}

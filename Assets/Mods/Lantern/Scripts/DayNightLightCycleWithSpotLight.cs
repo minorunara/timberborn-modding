@@ -10,7 +10,7 @@ public class DayNightLightCycleWithSpotLight : MonoBehaviour, IFinishedStateList
 {
     public Light targetLight;  // 点滅させるライトを指定
     public float hueChangeSpeed = 0f;  // 色相の変化速度
-    public float fadeDuration = 1.0f;  // フェードの持続時間（秒）
+    public float fadeDuration = 1.0f;  // フェードの持続時間（1速の秒）
     private BuildingLightToggle _buildingLightToggle;
     private BuildingLighting _buildingLighting;
     private MaterialColorer _materialColorer;
@@ -38,7 +38,7 @@ public class DayNightLightCycleWithSpotLight : MonoBehaviour, IFinishedStateList
         }
         else
         {
-            Debug.LogWarning("DayNightLightCycleWithSpotLight: BuildingLightingが見つかりませんでした");
+            Debug.LogWarning("DayNightLightCycleWithSpotLight: BuildingLightingが見つかりませんでした。");
         }
         if (targetLight == null)
         {
@@ -88,16 +88,16 @@ public class DayNightLightCycleWithSpotLight : MonoBehaviour, IFinishedStateList
     void Update()
     {
         // 色相の更新
-        _currentHue += hueChangeSpeed * Time.deltaTime;
-        if (_currentHue > 1.0f)
-        {
-            _currentHue -= 1.0f;
-        }
-        if (_materialColorer != null)
-        {
-            _materialColorer.SetLightingHueOffset(gameObject, _currentHue);
-        }
-        UpdateLightColor();
+        //_currentHue += hueChangeSpeed * Time.deltaTime;
+        //if (_currentHue > 1.0f)
+        //{
+        //    _currentHue -= 1.0f;
+        //}
+        //if (_materialColorer != null)
+        //{
+        //    _materialColorer.SetLightingHueOffset(gameObject, _currentHue);
+        //}
+        // UpdateLightColor();
         if (_fadeTimer < fadeDuration && _isBuildingComplete)
         {
             _fadeTimer += Time.deltaTime;

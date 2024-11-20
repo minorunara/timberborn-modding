@@ -1,6 +1,7 @@
 {
   "Id": "Common",
   "Paths#append": [
-    "CustomMaterial/PaperLantern"
+    "CustomMaterial/PaperLantern",
+    "CustomMaterial/PaperLanternRed"
   ]
 }

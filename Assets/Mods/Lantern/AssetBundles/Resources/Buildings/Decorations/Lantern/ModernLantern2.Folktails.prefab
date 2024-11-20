@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 1294739309260980216}
   serializedVersion: 2
   m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.494, y: 0.265, z: 0.119}
-  m_LocalScale: {x: 1.6666665, y: 1.6666665, z: 1.6666665}
+  m_LocalPosition: {x: 0.499, y: 1.469, z: 0.379}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4269662926468975811}
@@ -44,10 +44,10 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 0.972549, g: 0.8125054, b: 0.22352937, a: 1}
-  m_Intensity: 0.2
-  m_Range: 1
-  m_SpotAngle: 120.40833
-  m_InnerSpotAngle: 39.282547
+  m_Intensity: 0.8
+  m_Range: 2
+  m_SpotAngle: 65.97604
+  m_InnerSpotAngle: 0
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 8527403288426957552}
   - component: {fileID: 6524747448274113163}
   m_Layer: 0
-  m_Name: IndoorLantern.Folktails
+  m_Name: ModernLantern2.Folktails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,8 +224,8 @@ MonoBehaviour:
   _selectionSoundName: Campfire
   _loopingSoundName: 
   _buildingCost:
-  - _goodId: Log
-    _amount: 2
+  - _goodId: TreatedPlank
+    _amount: 1
   _scienceCost: 30
   _placeFinished: 0
   _finishableWithBeaversOnSite: 1
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: -731835049, guid: b5f268a4cb31a93ed707a95d3a502b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefabName: IndoorLantern.FolkTails
+  _prefabName: ModernLantern2.Folktails
   _backwardCompatiblePrefabNames: []
   _requiredFeatureToggle: 
   _disablingFeatureToggle: 
@@ -259,12 +259,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _blocksSpecification:
-    _size: {x: 1, y: 1, z: 1}
+    _size: {x: 1, y: 1, z: 2}
     _blockSpecifications:
     - _matterBelow: 1
       _legacyOccupation: 9
       _useNewOccupation: 1
-      _occupations: 1
+      _occupations: 4
+      _stackable: 0
+      _occupyAllBelow: 0
+    - _matterBelow: 3
+      _legacyOccupation: 9
+      _useNewOccupation: 1
+      _occupations: 32
       _stackable: 0
       _occupyAllBelow: 0
   _entrance:
@@ -286,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _toolGroupId: Lanterns
-  _toolOrder: 50
+  _toolOrder: 54
   _toolShape: 0
   _layout: 0
   _customPivot:
@@ -321,10 +327,10 @@ MonoBehaviour:
   m_Script: {fileID: 652365310, guid: b6b9d4cc3090b6fceb2eb6438dd271f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _displayNameLocKey: minorunara.Lantern.IndoorLantern.DisplayName
-  _descriptionLocKey: minorunara.Lantern.IndoorLantern.Description
-  _flavorDescriptionLocKey: minorunara.Lantern.IndoorLantern.Flavor
-  _imagePath: Buildings/Decorations/Lantern/LanternIcon1
+  _displayNameLocKey: minorunara.Lantern.ModernLantern2.DisplayName
+  _descriptionLocKey: minorunara.Lantern.ModernLantern2.Description
+  _flavorDescriptionLocKey: minorunara.Lantern.ModernLantern2.Flavor
+  _imagePath: Buildings/Decorations/Lantern/LanternIcon5
 --- !u!114 &6655868618479782324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,7 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: -1115272012, guid: 75be7af0b34ada5bff62a949a3c4181d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _effectRadius: 1
+  _effectRadius: 2
 --- !u!114 &8303137305567347725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,7 +358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _effectSpecifications:
   - _needId: Lantern
-    _pointsPerHour: 0.1
+    _pointsPerHour: 0.5
     _satisfyToMaxValue: 0
 --- !u!114 &8527403288426957552
 MonoBehaviour:
@@ -391,6 +397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9052099508220955570}
   - component: {fileID: 1335323175500600242}
+  - component: {fileID: 7296682886346648554}
   m_Layer: 0
   m_Name: '#Finished'
   m_TagString: Untagged
@@ -433,8 +440,29 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.2, y: 0.3, z: 0.2}
-  m_Center: {x: 0.5, y: 0.15, z: 0.13}
+  m_Size: {x: 0.2, y: 1.9, z: 0.2}
+  m_Center: {x: 0.5, y: 0.95, z: 0.1}
+--- !u!135 &7296682886346648554
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4518819463007754036}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.2
+  m_Center: {x: 0.5, y: 1.7, z: 0.35}
 --- !u!1 &4986753967992917326
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +508,7 @@ MonoBehaviour:
   m_Script: {fileID: -1942782917, guid: 40833514e55bcf2135fbcf9411078554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _modelName: Buildings\Decorations\Lantern\IndoorLantern.Forktails.Model
+  _modelName: Buildings\Decorations\Lantern\ModernLantern2.Forktails.Model
 --- !u!1 &7585582396409993784
 GameObject:
   m_ObjectHideFlags: 0

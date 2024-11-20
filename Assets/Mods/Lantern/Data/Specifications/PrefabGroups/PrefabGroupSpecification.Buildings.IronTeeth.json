@@ -1,6 +1,11 @@
 {
   "Id": "Buildings.IronTeeth",
   "Paths#append": [
-    "Buildings/Decorations/Lantern/IndoorLantern.IronTeeth"
+    "Buildings/Decorations/Lantern/IndoorLantern.Folktails",
+    "Buildings/Decorations/Lantern/PaperLantern.Folktails",
+    "Buildings/Decorations/Lantern/StreetLantern.Folktails",
+    "Buildings/Decorations/Lantern/GardenLantern.Folktails",
+    "Buildings/Decorations/Lantern/ModernLantern1.Folktails",
+    "Buildings/Decorations/Lantern/ModernLantern2.Folktails"
   ]
 }
