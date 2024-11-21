@@ -1,6 +1,6 @@
 {
   "Name": "Lanterns",
-  "Version": "2.0",
+  "Version": "2.0.0",
   "Id": "Timberborn.ModExamples.Lanterns",
   "MinimumGameVersion": "0.6.0.0",
   "Description": "This mod adds lanterns that glow at night.",

@@ -76,7 +76,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4269662926468975811}
+  m_Father: {fileID: 9052099508220955570}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!108 &10939881537464652
 Light:
@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 8303137305567347725}
   - component: {fileID: 8527403288426957552}
   - component: {fileID: 6524747448274113163}
+  - component: {fileID: 2250044949959419210}
   m_Layer: 0
   m_Name: PaperLantern.Folktails
   m_TagString: Untagged
@@ -458,6 +459,25 @@ MonoBehaviour:
   targetLight: {fileID: 10939881537464652}
   hueChangeSpeed: 0
   fadeDuration: 1
+--- !u!114 &2250044949959419210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2913691829264967832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2d66f75ed28cf049a455de1dd2dc8de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lanternParent: {fileID: 4269662926468975811}
+  childObjectPrefix: '#Empty'
+  baseSwingSpeed: 2
+  baseSwingAmplitude: 10
+  maxSwingAmplitude: 30
+  maxTiltAngle: 10
+  playerCamera: {fileID: 0}
 --- !u!1 &4518819463007754036
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,6 +516,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4269662926468975811}
+  - {fileID: 691714660577069676}
   m_Father: {fileID: 3843467759518020925}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &206561451558967171
@@ -695,8 +716,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 691714660577069676}
+  m_Children: []
   m_Father: {fileID: 9052099508220955570}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4292392015380680522

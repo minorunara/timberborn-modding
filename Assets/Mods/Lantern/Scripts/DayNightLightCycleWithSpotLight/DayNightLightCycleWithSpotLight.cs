@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using Bindito.Core;
 using Timberborn.Buildings;
 using Timberborn.TimeSystem;
@@ -22,6 +23,8 @@ public class DayNightLightCycleWithSpotLight : MonoBehaviour, IFinishedStateList
     private float _defaultLightIntensity = 0.0f;
     private EventBus _eventBus;
     private IDayNightCycle _dayNightCycle;
+    private Vector3Int _coordinates;
+
     [Inject]
     public void InjectDependencies(EventBus eventBus, IDayNightCycle dayNightCycle, MaterialColorer materialColorer)
     {
@@ -53,11 +56,21 @@ public class DayNightLightCycleWithSpotLight : MonoBehaviour, IFinishedStateList
         // フェードの更新
         if (_dayNightCycle.IsNighttime && _isBuildingComplete)
         {
-            StartFadeInInstant();
+            ImmediateLightOn();
         }
         else
         {
-            StartFadeOutInstant();
+            ImmediateLightOff();
+        }
+        // このインスタンス自身のブロックの座標を取得
+        BlockObject blockObject = GetComponent<BlockObject>();
+        if (blockObject != null)
+        {
+            _coordinates = blockObject.Coordinates;
+        }
+        else
+        {
+            Debug.LogWarning("DayNightLightCycleWithSpotLight: BlockObjectが見つかりませんでした。");
         }
     }
     public void OnEnterFinishedState()
@@ -67,11 +80,11 @@ public class DayNightLightCycleWithSpotLight : MonoBehaviour, IFinishedStateList
         {
             if (_dayNightCycle.IsNighttime && !_isLightOn)
             {
-                StartFadeIn();
+                ImmediateLightOn();
             }
             else if (!_dayNightCycle.IsNighttime && _isLightOn)
             {
-                StartFadeOutInstant();
+                ImmediateLightOff();
             }
         }
     }
@@ -137,7 +150,7 @@ public class DayNightLightCycleWithSpotLight : MonoBehaviour, IFinishedStateList
     {
         StartFadeOut();
     }
-    private void StartFadeInInstant()
+    private void ImmediateLightOn()
     {
         if (_buildingLightToggle != null)
         {
@@ -155,7 +168,7 @@ public class DayNightLightCycleWithSpotLight : MonoBehaviour, IFinishedStateList
             Debug.LogWarning("DayNightLightCycleWithSpotLight: BuildingLightToggleが初期化されていません。");
         }
     }
-    private void StartFadeOutInstant()
+    private void ImmediateLightOff()
     {
         if (_buildingLightToggle != null)
         {
@@ -173,19 +186,46 @@ public class DayNightLightCycleWithSpotLight : MonoBehaviour, IFinishedStateList
     {
         if (!_isLightOn && _buildingLightToggle != null)
         {
-            _buildingLightToggle.TurnOn();
-            _isFadingIn = true;
-            _fadeTimer = 0.0f;
+            StartCoroutine(WaitAndTurnOnLight());
         }
+    }
+
+    private IEnumerator WaitAndTurnOnLight()
+    {
+
+        // 山の影に入る所ほどはやく点灯させる
+        float adjustedX = _coordinates.x * 0.5f;
+        float adjustedY = Mathf.Max(0, 256f - _coordinates.y);
+        float distance = Mathf.Sqrt(adjustedX * adjustedX + adjustedY * adjustedY);
+        float maxDistance = 286f;
+        float WaitTime = (distance / maxDistance) * 30.0f;
+        yield return new WaitForSeconds(WaitTime);
+        _fadeTimer = 0.0f;
+        _isFadingIn = true;
+        yield return new WaitForSeconds(0.1f);
+        _buildingLightToggle.TurnOn();
+
     }
     private void StartFadeOut()
     {
         if (_isLightOn)
         {
-            _isFadingIn = false;
-            _fadeTimer = 0.0f;
+            StartCoroutine(WaitAndTurnOffLight());
         }
     }
+
+    private IEnumerator WaitAndTurnOffLight()
+    {
+        // 0秒から5秒の間でランダムに待機
+        float WaitTime = UnityEngine.Random.Range(0f, 5f);
+        yield return new WaitForSeconds(WaitTime);
+        _fadeTimer = 0.0f;
+        _isFadingIn = false;
+        yield return new WaitForSeconds(0.1f);
+        _buildingLightToggle.TurnOn();
+
+    }
+
     void UpdateLightColor()
     {
         if (targetLight != null)
