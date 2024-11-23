@@ -471,13 +471,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2d66f75ed28cf049a455de1dd2dc8de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lanternParent: {fileID: 4269662926468975811}
+  SwingObjectParent: {fileID: 4269662926468975811}
   childObjectPrefix: '#Empty'
   baseSwingSpeed: 2
   baseSwingAmplitude: 10
   maxSwingAmplitude: 30
   maxTiltAngle: 10
-  playerCamera: {fileID: 0}
+  threshold: 0.2
 --- !u!1 &4518819463007754036
 GameObject:
   m_ObjectHideFlags: 0

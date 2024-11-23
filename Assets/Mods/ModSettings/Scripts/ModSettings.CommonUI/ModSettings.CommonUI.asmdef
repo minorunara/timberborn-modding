@@ -1,0 +1,10 @@
+{
+  "name": "ModSettings.CommonUI",
+  "references": [
+    "ModSettings.ColorPicker",
+    "ModSettings.Common",
+    "ModSettings.Core",
+    "ModSettings.CoreUI"
+  ],
+  "autoReferenced": false
+}

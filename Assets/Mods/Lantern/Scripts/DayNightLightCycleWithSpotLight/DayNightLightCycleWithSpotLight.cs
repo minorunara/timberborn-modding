@@ -194,7 +194,7 @@ public class DayNightLightCycleWithSpotLight : MonoBehaviour, IFinishedStateList
     {
 
         // 山の影に入る所ほどはやく点灯させる
-        float adjustedX = _coordinates.x * 0.5f;
+        float adjustedX = Mathf.Max(0, 256f - _coordinates.x) * 0.5f;
         float adjustedY = Mathf.Max(0, 256f - _coordinates.y);
         float distance = Mathf.Sqrt(adjustedX * adjustedX + adjustedY * adjustedY);
         float maxDistance = 286f;
@@ -202,7 +202,7 @@ public class DayNightLightCycleWithSpotLight : MonoBehaviour, IFinishedStateList
         yield return new WaitForSeconds(WaitTime);
         _fadeTimer = 0.0f;
         _isFadingIn = true;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.05f);
         _buildingLightToggle.TurnOn();
 
     }
@@ -221,7 +221,7 @@ public class DayNightLightCycleWithSpotLight : MonoBehaviour, IFinishedStateList
         yield return new WaitForSeconds(WaitTime);
         _fadeTimer = 0.0f;
         _isFadingIn = false;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.05f);
         _buildingLightToggle.TurnOn();
 
     }

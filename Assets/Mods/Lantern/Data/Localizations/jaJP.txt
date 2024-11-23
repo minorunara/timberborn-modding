@@ -7,7 +7,7 @@ minorunara.ToriiGates.SimpleToriiGate.Description,板で作られた白木鳥居
 minorunara.ToriiGates.SimpleToriiGate.Flavor,「あの鳥居、めっちゃ美味そう！」—ピナ
 minorunara.ToriiGates.DemoToriiGate.DisplayName,デモ版の鳥居
 minorunara.ToriiGates.DemoToriiGate.Description,Timberbornがまだデモ版だった頃に存在した鳥居を再現したもの。
-minorunara.ToriiGates.DemoToriiGate.Flavor,「歴史を味わっている。」—ピナ
+minorunara.ToriiGates.DemoToriiGate.Flavor,2021年1月26日、デモ版のリリース日。
 minorunara.ToriiGates.IronToriiGate.DisplayName,鉄製の鳥居
 minorunara.ToriiGates.IronToriiGate.Description,鉄で作られた靖国鳥居。
 minorunara.ToriiGates.IronToriiGate.Flavor,鳥居を齧るビーバーが後を絶たなかったため、鉄で作ることで対策を施した。

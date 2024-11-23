@@ -7,22 +7,24 @@ using Timberborn.BlockSystem;
 
 public class WindSwingAnimator : MonoBehaviour, IFinishedStateListener
 {
-    [SerializeField] private Transform lanternParent; // 親オブジェクトを指定
+    [SerializeField] private Transform SwingObjectParent; // 親オブジェクトを指定
     [SerializeField] private string childObjectPrefix = "#Empty"; // 子要素の接頭辞
-    [SerializeField] private float baseSwingSpeed = 2.0f;
-    [SerializeField] private float baseSwingAmplitude = 10.0f;
+    [SerializeField] private float baseSwingSpeed = 2.0f; // 揺れる速さ
+    [SerializeField] private float baseSwingAmplitude = 10.0f; // 揺れ幅の基本値
     [SerializeField] private float maxSwingAmplitude = 25.0f; // 最大振幅を追加
-    [SerializeField] private float maxTiltAngle = 15.0f; // 最大傾き角度
+    [SerializeField] private float maxTiltAngle = 15.0f; // 最大傾き度
+    [SerializeField] private float threshold = 0.2f; // 感知する最小の風速
 
     private Vector2 windDirection;
     private float windStrength;
-    private List<Transform> lanterns;
+    private List<Transform> SwingObjects;
     private float[] swingOffsets;
     private float[] currentAmplitudes;
     private float[] swingSpeeds;
     private float[] tiltAngles; // 傾きの角度を保持する配列
     private bool _isBuildingComplete = false;
     private WindService _windService;
+    private bool _wasWindStrengthBelowThreshold = false;
 
     [Inject]
     public void InjectDependencies(WindService windService)
@@ -32,16 +34,16 @@ public class WindSwingAnimator : MonoBehaviour, IFinishedStateListener
 
     void Start()
     {
-        lanterns = new List<Transform>();
-        FindChildLanterns(lanternParent, childObjectPrefix);
+        SwingObjects = new List<Transform>();
+        FindChildSwingObjects(SwingObjectParent, childObjectPrefix);
 
-        int lanternCount = lanterns.Count;
-        swingOffsets = new float[lanternCount];
-        currentAmplitudes = new float[lanternCount];
-        swingSpeeds = new float[lanternCount];
-        tiltAngles = new float[lanternCount]; // 傾き角度の初期化
+        int SwingObjectCount = SwingObjects.Count;
+        swingOffsets = new float[SwingObjectCount];
+        currentAmplitudes = new float[SwingObjectCount];
+        swingSpeeds = new float[SwingObjectCount];
+        tiltAngles = new float[SwingObjectCount]; // 傾き角度の初期化
 
-        for (int i = 0; i < lanternCount; i++)
+        for (int i = 0; i < SwingObjectCount; i++)
         {
             swingOffsets[i] = UnityEngine.Random.Range(0f, Mathf.PI * 2);
             currentAmplitudes[i] = baseSwingAmplitude;
@@ -63,11 +65,26 @@ public class WindSwingAnimator : MonoBehaviour, IFinishedStateListener
 
     void Update()
     {
-        if (_isBuildingComplete) {
+        if (_isBuildingComplete)
+        {
             UpdateWind();
-            UpdateLanternsSwing();
-        }
 
+            // 風速が閾値を超えている場合のみ調整する
+            if (windStrength > threshold)
+            {
+                windStrength = Mathf.Max(0, windStrength - threshold) * (1 / (1 - threshold) );
+
+                // 風速が閾値を超えた場合はランタンの揺れを更新
+                UpdateSwingObjectsSwing();
+                _wasWindStrengthBelowThreshold = false; // フラグをリセット
+            }
+            else if (!_wasWindStrengthBelowThreshold)
+            {
+                // 初回のみランタンの揺れを更新
+                UpdateSwingObjectsSwing();
+                _wasWindStrengthBelowThreshold = true; // フラグを設定
+            }
+        }
     }
 
     private void UpdateWind()
@@ -77,7 +94,7 @@ public class WindSwingAnimator : MonoBehaviour, IFinishedStateListener
         windStrength = GetWindStrength();
     }
 
-    private void UpdateLanternsSwing()
+    private void UpdateSwingObjectsSwing()
     {
         // 風の方向をワールド空間で統一
         float windAngle = Vector2.SignedAngle(Vector2.down, windDirection);
@@ -86,9 +103,9 @@ public class WindSwingAnimator : MonoBehaviour, IFinishedStateListener
         // 揺れ幅の目標振幅を計算
         float targetAmplitude = Mathf.Lerp(baseSwingAmplitude, maxSwingAmplitude, windStrength);
 
-        for (int i = 0; i < lanterns.Count; i++)
+        for (int i = 0; i < SwingObjects.Count; i++)
         {
-            if (lanterns[i] == null) continue;
+            if (SwingObjects[i] == null) continue;
 
             // 傾きを風の強さに応じて更新（傾きの角度を保持）
             tiltAngles[i] = Mathf.Lerp(tiltAngles[i], windStrength * maxTiltAngle, Time.deltaTime * 2);
@@ -98,7 +115,7 @@ public class WindSwingAnimator : MonoBehaviour, IFinishedStateListener
             float swingAngle = Mathf.Sin(Time.time * swingSpeeds[i] * (1.0f + windStrength) + swingOffsets[i]) * currentAmplitudes[i] * windStrength;
 
             // 最終的な回転を適用 (順序: 風向き -> 傾き -> 揺れ)
-            lanterns[i].rotation = windRotation * tiltRotation * Quaternion.AngleAxis(swingAngle, Vector3.right);
+            SwingObjects[i].rotation = windRotation * tiltRotation * Quaternion.AngleAxis(swingAngle, Vector3.right);
 
             // 揺れ幅を風の強さに応じて変化させる（最大振幅を設定）
             currentAmplitudes[i] = Mathf.Lerp(currentAmplitudes[i], targetAmplitude, Time.deltaTime * 2);
@@ -126,15 +143,15 @@ public class WindSwingAnimator : MonoBehaviour, IFinishedStateListener
         return 0.0f; // WindServiceがない場合の仮の値
     }
 
-    private void FindChildLanterns(Transform parent, string prefix)
+    private void FindChildSwingObjects(Transform parent, string prefix)
     {
         foreach (Transform child in parent)
         {
             if (child.name.StartsWith(prefix))
             {
-                lanterns.Add(child);
+                SwingObjects.Add(child);
             }
-            FindChildLanterns(child, prefix); // 再帰的に子要素を探す
+            FindChildSwingObjects(child, prefix); // 再帰的に子要素を探す
         }
     }
 }

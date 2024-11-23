@@ -2,6 +2,8 @@
   "Id": "Common",
   "Paths#append": [
     "CustomMaterial/PaperLantern",
-    "CustomMaterial/PaperLanternRed"
+    "CustomMaterial/PaperLanternRed",
+    "CustomMaterial/FactionLogoTorii",
+    "CustomMaterial/HugeToriiMetal"
   ]
 }

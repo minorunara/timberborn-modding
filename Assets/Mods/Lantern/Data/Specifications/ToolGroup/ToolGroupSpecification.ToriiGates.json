@@ -1,0 +1,8 @@
+{
+  "Id": "ToriiGates",
+  "GroupId": "Decoration",
+  "Order": 310,
+  "Icon": "Buildings/Decorations/ToriiGate/ToriiGateCategoryIcon",
+  "NameLocKey": "minorunara.ToriiGates.ToriiCategory.DisplayName",
+  "FallbackGroup": false
+}
