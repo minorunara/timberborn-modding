@@ -1,7 +1,7 @@
 {
   "Name": "Torii Gates and Lanterns",
-  "Version": "2.0.0",
-  "Id": "Timberborn.ModExamples.Lanterns",
+  "Version": "2.0.3",
+  "Id": "ToriiLanterns",
   "MinimumGameVersion": "0.6.0.0",
   "Description": "This mod adds 7 types of torii gates, and 6 types of lanterns that glow at night.",
   "RequiredMods": [
@@ -12,6 +12,10 @@
     {
       "Id": "TimberApi",
       "MinimumVersion": "0.7.0.1"
+    },
+    {
+      "Id": "AppendVanillaMaterials",
+      "MinimumVersion": "0.6.5.00"
     }
   ]
 }

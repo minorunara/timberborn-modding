@@ -473,9 +473,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SwingObjectParent: {fileID: 4269662926468975811}
   childObjectPrefix: '#Empty'
-  baseSwingSpeed: 2
+  baseSwingSpeed: 1.5
   baseSwingAmplitude: 10
-  maxSwingAmplitude: 30
+  maxSwingAmplitude: 20
   maxTiltAngle: 10
   threshold: 0.2
 --- !u!1 &4518819463007754036

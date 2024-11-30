@@ -72,17 +72,19 @@ public class WindSwingAnimator : MonoBehaviour, IFinishedStateListener
             // 風速が閾値を超えている場合のみ調整する
             if (windStrength > threshold)
             {
+                if (windStrength > 1)
+                {
+                    windStrength = 1; // MODかなにかで風力が大きすぎる時対策
+                }
                 windStrength = Mathf.Max(0, windStrength - threshold) * (1 / (1 - threshold) );
 
                 // 風速が閾値を超えた場合はランタンの揺れを更新
                 UpdateSwingObjectsSwing();
-                _wasWindStrengthBelowThreshold = false; // フラグをリセット
             }
             else if (!_wasWindStrengthBelowThreshold)
             {
-                // 初回のみランタンの揺れを更新
+                windStrength = 0;
                 UpdateSwingObjectsSwing();
-                _wasWindStrengthBelowThreshold = true; // フラグを設定
             }
         }
     }
