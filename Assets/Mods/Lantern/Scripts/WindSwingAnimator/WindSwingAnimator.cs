@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Timberborn.WindSystem;
 using Bindito.Core;
 using Timberborn.BlockSystem;
-
+using ToriiGatesLanternMod;
 
 public class WindSwingAnimator : MonoBehaviour, IFinishedStateListener
 {
@@ -24,31 +24,41 @@ public class WindSwingAnimator : MonoBehaviour, IFinishedStateListener
     private float[] tiltAngles; // ŒX‚«‚ÌŠp“x‚ğ•Û‚·‚é”z—ñ
     private bool _isBuildingComplete = false;
     private WindService _windService;
+    private WindSwingAnimatorSettings _modSettings;
     private bool _wasWindStrengthBelowThreshold = false;
 
     [Inject]
-    public void InjectDependencies(WindService windService)
+    public void InjectDependencies(WindService windService, WindSwingAnimatorSettings modSettings)
     {
         _windService = windService;
+        _modSettings = modSettings;
     }
 
     void Start()
     {
-        SwingObjects = new List<Transform>();
-        FindChildSwingObjects(SwingObjectParent, childObjectPrefix);
-
-        int SwingObjectCount = SwingObjects.Count;
-        swingOffsets = new float[SwingObjectCount];
-        currentAmplitudes = new float[SwingObjectCount];
-        swingSpeeds = new float[SwingObjectCount];
-        tiltAngles = new float[SwingObjectCount]; // ŒX‚«Šp“x‚Ì‰Šú‰»
-
-        for (int i = 0; i < SwingObjectCount; i++)
+        // •——h‚ê‚ª—LŒø‚©‚Ç‚¤‚©‚ğİ’è‚©‚çŠm”F
+        if (!_modSettings.WindSwingEnabledSetting.Value)
         {
-            swingOffsets[i] = UnityEngine.Random.Range(0f, Mathf.PI * 2);
-            currentAmplitudes[i] = baseSwingAmplitude;
-            swingSpeeds[i] = baseSwingSpeed * UnityEngine.Random.Range(0.8f, 1.2f);
-            tiltAngles[i] = 0f; // ‰ŠúŒX‚«Šp“x‚ğİ’è
+            this.enabled = false; // •——h‚ê‚ª–³Œø‚Ìê‡Aˆ—‚ğƒXƒLƒbƒv
+        }
+        else
+        {
+            SwingObjects = new List<Transform>();
+            FindChildSwingObjects(SwingObjectParent, childObjectPrefix);
+
+            int SwingObjectCount = SwingObjects.Count;
+            swingOffsets = new float[SwingObjectCount];
+            currentAmplitudes = new float[SwingObjectCount];
+            swingSpeeds = new float[SwingObjectCount];
+            tiltAngles = new float[SwingObjectCount]; // ŒX‚«Šp“x‚Ì‰Šú‰»
+
+            for (int i = 0; i < SwingObjectCount; i++)
+            {
+                swingOffsets[i] = UnityEngine.Random.Range(0f, Mathf.PI * 2);
+                currentAmplitudes[i] = baseSwingAmplitude;
+                swingSpeeds[i] = baseSwingSpeed * UnityEngine.Random.Range(0.8f, 1.2f);
+                tiltAngles[i] = 0f; // ‰ŠúŒX‚«Šp“x‚ğİ’è
+            }
         }
     }
     public void OnEnterFinishedState()
@@ -65,7 +75,7 @@ public class WindSwingAnimator : MonoBehaviour, IFinishedStateListener
 
     void Update()
     {
-        if (_isBuildingComplete)
+        if (_isBuildingComplete && _modSettings.WindSwingEnabledSetting.Value)
         {
             UpdateWind();
 

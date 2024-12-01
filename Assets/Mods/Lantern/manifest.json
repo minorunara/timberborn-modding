@@ -14,6 +14,10 @@
       "MinimumVersion": "0.7.0.1"
     },
     {
+      "Id": "eMka.ModSettings",
+      "MinimumVersion": "0.6.2.0"
+    },
+    {
       "Id": "AppendVanillaMaterials",
       "MinimumVersion": "0.6.5.00"
     }

@@ -48,3 +48,6 @@ minorunara.Lantern.ModernLantern1.Flavor,Beavers who have conquered the darkness
 minorunara.Lantern.ModernLantern2.DisplayName,Modern Lantern (Square)
 minorunara.Lantern.ModernLantern2.Description,A square shaped streetlight-type lantern.
 minorunara.Lantern.ModernLantern2.Flavor,The present will eventually become the past. But even in the future dams will remain important.
+minorunara.ToriiGatesLantern.SettingsHeader,"Torii Gates and Lanterns Mod Settings"
+minorunara.ToriiGatesLantern.SettingsDiscription,"Enable lanterns and shide to sway in the wind"
+minorunara.ToriiGatesLantern.SettingsTooltip,"You can disable this if you find it annoying."

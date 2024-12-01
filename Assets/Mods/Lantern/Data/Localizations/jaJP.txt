@@ -48,3 +48,6 @@ minorunara.Lantern.ModernLantern1.Flavor,夜の闇を克服したビーバーに
 minorunara.Lantern.ModernLantern2.DisplayName,モダンな街灯（四角）
 minorunara.Lantern.ModernLantern2.Description,今風の街灯。
 minorunara.Lantern.ModernLantern2.Flavor,現代はやがて過去になる。しかし遠い未来でも治水の重要性は変わらず在り続けるだろう。
+minorunara.ToriiGatesLantern.SettingsHeader,鳥居と照明MOD設定
+minorunara.ToriiGatesLantern.SettingsDiscription,提灯と紙垂を風で揺らす
+minorunara.ToriiGatesLantern.SettingsTooltip,うっとうしい場合は無効化できます。

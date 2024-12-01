@@ -1,7 +1,10 @@
 {
     "name": "Timberborn.WindSwingAnimator",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:61ba77d551ba40aeb4b579b38e90458c",
+        "GUID:122382bd239b45dda2ffdec954f88db7"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
