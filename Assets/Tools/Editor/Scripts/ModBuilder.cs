@@ -1,25 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using UnityEditor;
 using UnityEditor.Build.Reporting;
-using UnityEngine;
 
 namespace Timberborn.ModdingTools {
   internal class ModBuilder {
 
-    private static readonly string BuildDirectory = "ModsBuild";
     private static readonly string BuildName = "TimberbornModExamples";
-    private static readonly string GameModsDirectory = "Mods";
     private static readonly string WorkshopDataFile = "workshop_data.json";
-    private static readonly string UserDataFolder =
-        Application.platform == RuntimePlatform.OSXEditor
-            ? Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
-                           "Documents",
-                           "Timberborn")
-            : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
-                           "Timberborn");
     private static readonly string CompatibilityVersionPrefix = "version-";
     private readonly List<ModDefinition> _modDefinitions;
     private readonly ModBuilderSettings _modBuilderSettings;
@@ -34,7 +24,7 @@ namespace Timberborn.ModdingTools {
     }
 
     public bool Build() {
-      var buildPath = Path.Combine(UserDataFolder, BuildDirectory, BuildName);
+      var buildPath = Path.Combine(ModDirectories.BuildDirectory, BuildName);
       if (!_modBuilderSettings.BuildCode || TryBuildProject(buildPath)) {
         foreach (var modDefinition in _modDefinitions) {
           BuildMod(modDefinition, buildPath);
@@ -63,17 +53,19 @@ namespace Timberborn.ModdingTools {
       if (_modBuilderSettings.BuildWindowsAssetBundle || _modBuilderSettings.BuildMacAssetBundle) {
         _assetBundleBuilder.Build(modDefinition, modDirectory, _modBuilderSettings);
       }
+      if (_modBuilderSettings.BuildZipArchive) {
+        BuildZipArchive(modDefinition, rootDirectory);
+      }
     }
 
-    private DirectoryInfo CreateModDirectory(ModDefinition modDefinition, 
+    private DirectoryInfo CreateModDirectory(ModDefinition modDefinition,
                                              out DirectoryInfo rootDirectory) {
-      var modsDirectory = Path.Combine(UserDataFolder, GameModsDirectory);
-      var rootDirectoryPath = Path.Combine(modsDirectory, modDefinition.Name);
+      var rootDirectoryPath = Path.Combine(ModDirectories.ModsDirectory, modDefinition.Name);
       rootDirectory = Directory.CreateDirectory(rootDirectoryPath);
-      var directoryPath = string.IsNullOrEmpty(_modBuilderSettings.CompatibilityVersion) ?
-          rootDirectoryPath :
-          Path.Combine(rootDirectoryPath,
-                       CompatibilityVersionPrefix + _modBuilderSettings.CompatibilityVersion);
+      var directoryPath = string.IsNullOrEmpty(_modBuilderSettings.CompatibilityVersion)
+          ? rootDirectoryPath
+          : Path.Combine(rootDirectoryPath,
+                         CompatibilityVersionPrefix + _modBuilderSettings.CompatibilityVersion);
       if (_modBuilderSettings.DeleteFiles && Directory.Exists(directoryPath)) {
         var workshopFilePath = Path.Combine(directoryPath, WorkshopDataFile);
         var workshopData = File.Exists(workshopFilePath)
@@ -87,6 +79,12 @@ namespace Timberborn.ModdingTools {
         return modDirectory;
       }
       return Directory.CreateDirectory(directoryPath);
+    }
+
+    private static void BuildZipArchive(ModDefinition modDefinition, DirectoryInfo rootDirectory) {
+      var zipFilePath = Path.Combine(ModDirectories.ModsDirectory, modDefinition.Name + ".zip");
+      File.Delete(zipFilePath);
+      ZipFile.CreateFromDirectory(rootDirectory.FullName, zipFilePath);
     }
 
   }
