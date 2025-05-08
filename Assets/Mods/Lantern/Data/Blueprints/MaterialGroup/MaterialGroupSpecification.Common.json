@@ -1,0 +1,11 @@
+{
+  "MaterialGroupSpec": {
+    "Id": "Common",
+    "Paths#append": [
+      "CustomMaterial/PaperLantern",
+      "CustomMaterial/PaperLanternRed",
+      "CustomMaterial/FactionLogoTorii",
+      "CustomMaterial/HugeToriiMetal"
+    ]
+  }
+}

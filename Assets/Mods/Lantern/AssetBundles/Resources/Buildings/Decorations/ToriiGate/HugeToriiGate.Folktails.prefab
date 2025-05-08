@@ -472,12 +472,12 @@ GameObject:
   - component: {fileID: 546950832392268440}
   - component: {fileID: 2947116180059414697}
   - component: {fileID: 6031282830067767373}
-  - component: {fileID: 5776403031127016712}
+  - component: {fileID: 7976603551253477931}
   - component: {fileID: 6376471119831514801}
   - component: {fileID: 5345895482233197734}
-  - component: {fileID: 8558832359820629069}
-  - component: {fileID: 800757990821631932}
+  - component: {fileID: 8725009680471124215}
   - component: {fileID: 1785586316729188344}
+  - component: {fileID: -3436485779193069074}
   m_Layer: 0
   m_Name: HugeToriiGate.Folktails
   m_TagString: Untagged
@@ -511,9 +511,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1621956572749542419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -731835049, guid: b5f268a4cb31a93ed707a95d3a502b0e, type: 3}
+  m_Script: {fileID: 1566945626, guid: b5f268a4cb31a93ed707a95d3a502b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentCache: {fileID: 0}
   _prefabName: HugeToriiGate.Folktails
   _backwardCompatiblePrefabNames: []
   _requiredFeatureToggle: 
@@ -527,9 +528,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1621956572749542419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -790041461, guid: 1bd6ccb667024f9c2b77daf7f62a4eed, type: 3}
+  m_Script: {fileID: -579399493, guid: 1bd6ccb667024f9c2b77daf7f62a4eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentCache: {fileID: 0}
   _selectionSoundName: TributeToIngenuity
   _loopingSoundName: 
   _buildingCost:
@@ -557,11 +559,14 @@ MonoBehaviour:
   m_Script: {fileID: 1596376676, guid: 1bd6ccb667024f9c2b77daf7f62a4eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentCache: {fileID: 0}
   _finishedModelName: '#Finished'
   _unfinishedModelName: '#Unfinished'
   _finishedUncoveredModelName: 
+  _undergroundModelName: 
   _constructionModeModel: 0
---- !u!114 &5776403031127016712
+  _undergroundModelDepth: 0
+--- !u!114 &7976603551253477931
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -570,1902 +575,2218 @@ MonoBehaviour:
   m_GameObject: {fileID: 1621956572749542419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1800879565, guid: c1ff95bb5ae0e8b420075ec58add6f36, type: 3}
+  m_Script: {fileID: 447443988, guid: c1ff95bb5ae0e8b420075ec58add6f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _blocksSpecification:
+  _componentCache: {fileID: 0}
+  _blocksSpec:
     _size: {x: 5, y: 9, z: 7}
-    _blockSpecifications:
+    _blockSpecs:
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 7
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 7
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 1
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
-      _occupations: -1
+      _occupations: 55
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 1
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: -1
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 1
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
-      _occupations: -1
+      _occupations: 55
       _stackable: 0
       _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
       _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
       _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 7
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 1
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
-      _occupations: -1
+      _occupations: 55
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 1
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: -1
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 1
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
-      _occupations: -1
+      _occupations: 55
       _stackable: 0
       _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 3
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 3
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
       _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
       _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 3
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 3
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 9
-      _useNewOccupation: 1
-      _occupations: 36
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 36
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 9
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
       _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
       _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 9
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 36
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 9
-      _useNewOccupation: 1
-      _occupations: 36
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
       _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
       _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 9
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 9
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 9
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 9
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 9
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 7
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 9
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 9
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: 0
-      _stackable: 0
-      _occupyAllBelow: 0
-    - _matterBelow: 3
-      _legacyOccupation: 1
-      _useNewOccupation: 1
-      _occupations: -1
-      _stackable: 0
-      _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
       _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
       _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
       _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
       _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 55
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
       _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: -1
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 55
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
       _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
       _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
       _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
       _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 55
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: -1
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 55
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 55
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 4
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: -1
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 4
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 55
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 55
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 4
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: -1
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 4
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 55
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 55
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 55
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 55
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 55
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 55
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 12
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: -1
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
     - _matterBelow: 3
-      _legacyOccupation: 1
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 0
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: -1
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: -1
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: -1
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: -1
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: -1
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: -1
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 12
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 51
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
+    - _matterBelow: 3
+      _legacyOccupation: 0
+      _useNewOccupation: 1
+      _occupations: 0
+      _stackable: 0
+      _occupyAllBelow: 0
+      _underground: 0
   _entrance:
     _hasEntrance: 0
     _coordinates: {x: 0, y: 0, z: 0}
@@ -2481,13 +2802,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1621956572749542419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 406104335, guid: 79523a2b71f4fae881a60ad2e723d456, type: 3}
+  m_Script: {fileID: -1925074215, guid: 79523a2b71f4fae881a60ad2e723d456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentCache: {fileID: 0}
   _noAutoWalls: 0
   _generateFloorsOnStackable: 0
   _blockAllEdges: 0
-  _addedEdges: []
+  _edgeGroups: []
+  _unblockedCoordinates: []
 --- !u!114 &5345895482233197734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2497,9 +2820,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1621956572749542419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -871492198, guid: c1ff95bb5ae0e8b420075ec58add6f36, type: 3}
+  m_Script: {fileID: -1706396145, guid: c1ff95bb5ae0e8b420075ec58add6f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentCache: {fileID: 0}
   _toolGroupId: ToriiGates
   _toolOrder: 507
   _toolShape: 0
@@ -2507,8 +2831,9 @@ MonoBehaviour:
   _customPivot:
     _hasCustomPivot: 1
     _coordinates: {x: 0.5, y: 2.5, z: 0}
+  _canBeAttachedToTerrainSide: 0
   _devModeTool: 0
---- !u!114 &8558832359820629069
+--- !u!114 &8725009680471124215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2517,26 +2842,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1621956572749542419}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1115272012, guid: 75be7af0b34ada5bff62a949a3c4181d, type: 3}
+  m_Script: {fileID: -1222417671, guid: 75be7af0b34ada5bff62a949a3c4181d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentCache: {fileID: 0}
   _effectRadius: 35
---- !u!114 &800757990821631932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621956572749542419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 459098212, guid: 75be7af0b34ada5bff62a949a3c4181d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _effectSpecifications:
-  - _needId: GreatToriiGate
-    _pointsPerHour: 1
-    _satisfyToMaxValue: 0
 --- !u!114 &1785586316729188344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2549,10 +2859,28 @@ MonoBehaviour:
   m_Script: {fileID: 652365310, guid: b6b9d4cc3090b6fceb2eb6438dd271f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentCache: {fileID: 0}
   _displayNameLocKey: minorunara.ToriiGates.HugeToriiGateFT.DisplayName
   _descriptionLocKey: minorunara.ToriiGates.HugeToriiGateFT.Description
   _flavorDescriptionLocKey: minorunara.ToriiGates.HugeToriiGateFT.Flavor
   _imagePath: Buildings/Decorations/ToriiGate/HugeToriiGateFTIcon
+--- !u!114 &-3436485779193069074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621956572749542419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 459098212, guid: 75be7af0b34ada5bff62a949a3c4181d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _componentCache: {fileID: 0}
+  _effects:
+  - _needId: GreatToriiGate
+    _pointsPerHour: 1
+    _satisfyToMaxValue: 0
 --- !u!1 &6188301185313872671
 GameObject:
   m_ObjectHideFlags: 0

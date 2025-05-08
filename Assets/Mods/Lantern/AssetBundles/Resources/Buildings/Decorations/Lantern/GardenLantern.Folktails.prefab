@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: -1942782917, guid: 40833514e55bcf2135fbcf9411078554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _modelName: ConstructionSites\ConstructionSite1x1\ConstructionSite1x1.Model
+  _modelName: ConstructionBases\ConstructionBase1x1\ConstructionBase1x1.Model
 --- !u!1 &2913691829264967832
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,14 +177,14 @@ GameObject:
   - component: {fileID: 3843467759518020925}
   - component: {fileID: -1809538892217393824}
   - component: {fileID: 8791166817320204919}
-  - component: {fileID: 2230644578300521325}
+  - component: {fileID: 3997327843720827000}
   - component: {fileID: -8922949206147560436}
   - component: {fileID: 8778242699898648074}
   - component: {fileID: -6212671170992136976}
-  - component: {fileID: 6655868618479782324}
-  - component: {fileID: 8303137305567347725}
-  - component: {fileID: 8527403288426957552}
-  - component: {fileID: 6524747448274113163}
+  - component: {fileID: -737453508599006682}
+  - component: {fileID: -2646710342983987721}
+  - component: {fileID: -1490996169861177061}
+  - component: {fileID: 314989523090124994}
   m_Layer: 0
   m_Name: GardenLantern.Folktails
   m_TagString: Untagged
@@ -218,9 +218,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2913691829264967832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -790041461, guid: 1bd6ccb667024f9c2b77daf7f62a4eed, type: 3}
+  m_Script: {fileID: -579399493, guid: 1bd6ccb667024f9c2b77daf7f62a4eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentCache: {fileID: 0}
   _selectionSoundName: Campfire
   _loopingSoundName: 
   _buildingCost:
@@ -239,14 +240,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2913691829264967832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -731835049, guid: b5f268a4cb31a93ed707a95d3a502b0e, type: 3}
+  m_Script: {fileID: 1566945626, guid: b5f268a4cb31a93ed707a95d3a502b0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentCache: {fileID: 0}
   _prefabName: GardenLantern.Folktails
   _backwardCompatiblePrefabNames: []
   _requiredFeatureToggle: 
   _disablingFeatureToggle: 
---- !u!114 &2230644578300521325
+--- !u!114 &3997327843720827000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,18 +257,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 2913691829264967832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1800879565, guid: c1ff95bb5ae0e8b420075ec58add6f36, type: 3}
+  m_Script: {fileID: 447443988, guid: c1ff95bb5ae0e8b420075ec58add6f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _blocksSpecification:
+  _componentCache: {fileID: 0}
+  _blocksSpec:
     _size: {x: 1, y: 1, z: 1}
-    _blockSpecifications:
+    _blockSpecs:
     - _matterBelow: 1
-      _legacyOccupation: 9
+      _legacyOccupation: 0
       _useNewOccupation: 1
       _occupations: 4
       _stackable: 0
       _occupyAllBelow: 0
+      _underground: 0
   _entrance:
     _hasEntrance: 0
     _coordinates: {x: 0, y: 0, z: 0}
@@ -282,9 +286,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2913691829264967832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -871492198, guid: c1ff95bb5ae0e8b420075ec58add6f36, type: 3}
+  m_Script: {fileID: -1706396145, guid: c1ff95bb5ae0e8b420075ec58add6f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentCache: {fileID: 0}
   _toolGroupId: Lanterns
   _toolOrder: 52
   _toolShape: 0
@@ -292,6 +297,7 @@ MonoBehaviour:
   _customPivot:
     _hasCustomPivot: 0
     _coordinates: {x: 0, y: 0, z: 0}
+  _canBeAttachedToTerrainSide: 0
   _devModeTool: 0
 --- !u!114 &8778242699898648074
 MonoBehaviour:
@@ -305,10 +311,13 @@ MonoBehaviour:
   m_Script: {fileID: 1596376676, guid: 1bd6ccb667024f9c2b77daf7f62a4eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentCache: {fileID: 0}
   _finishedModelName: '#Finished'
   _unfinishedModelName: '#Unfinished'
   _finishedUncoveredModelName: 
+  _undergroundModelName: 
   _constructionModeModel: 0
+  _undergroundModelDepth: 0
 --- !u!114 &-6212671170992136976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,11 +330,12 @@ MonoBehaviour:
   m_Script: {fileID: 652365310, guid: b6b9d4cc3090b6fceb2eb6438dd271f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentCache: {fileID: 0}
   _displayNameLocKey: minorunara.Lantern.GardenLantern.DisplayName
   _descriptionLocKey: minorunara.Lantern.GardenLantern.Description
   _flavorDescriptionLocKey: minorunara.Lantern.GardenLantern.Flavor
   _imagePath: Buildings/Decorations/Lantern/LanternIcon3
---- !u!114 &6655868618479782324
+--- !u!114 &-737453508599006682
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -334,11 +344,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2913691829264967832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1115272012, guid: 75be7af0b34ada5bff62a949a3c4181d, type: 3}
+  m_Script: {fileID: -1222417671, guid: 75be7af0b34ada5bff62a949a3c4181d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentCache: {fileID: 0}
   _effectRadius: 1
---- !u!114 &8303137305567347725
+--- !u!114 &-2646710342983987721
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -350,11 +361,12 @@ MonoBehaviour:
   m_Script: {fileID: 459098212, guid: 75be7af0b34ada5bff62a949a3c4181d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _effectSpecifications:
+  _componentCache: {fileID: 0}
+  _effects:
   - _needId: Lantern
     _pointsPerHour: 0.4
     _satisfyToMaxValue: 0
---- !u!114 &8527403288426957552
+--- !u!114 &-1490996169861177061
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -366,7 +378,11 @@ MonoBehaviour:
   m_Script: {fileID: 1884075000, guid: 1bd6ccb667024f9c2b77daf7f62a4eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6524747448274113163
+  _componentCache: {fileID: 0}
+  _buildingLightObjects: {fileID: 0}
+  _lightingStrength: 1
+  _isOn: 0
+--- !u!114 &314989523090124994
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
